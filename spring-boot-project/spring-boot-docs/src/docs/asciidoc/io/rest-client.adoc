@@ -11,9 +11,15 @@ The auto-configured `RestTemplateBuilder` ensures that sensible `HttpMessageConv
 
 The following code shows a typical example:
 
-[source,java,indent=0,subs="verbatim"]
+.Java
+[source,java,indent=0,subs="verbatim",role="primary"]
 ----
 include::{docs-java}/io/restclient/resttemplate/MyService.java[]
+----
+.Kotlin
+[source,kotlin,indent=0,subs="verbatim",role="secondary"]
+----
+include::{docs-kotlin}/io/restclient/resttemplate/MyService.kt[]
 ----
 
 TIP: `RestTemplateBuilder` includes a number of useful methods that can be used to quickly configure a `RestTemplate`.
@@ -33,18 +39,30 @@ All such beans are automatically registered with the auto-configured `RestTempla
 
 The following example shows a customizer that configures the use of a proxy for all hosts except `192.168.0.5`:
 
-[source,java,indent=0,subs="verbatim"]
+.Java
+[source,java,indent=0,subs="verbatim",role="primary"]
 ----
 include::{docs-java}/io/restclient/resttemplate/customization/MyRestTemplateCustomizer.java[]
+----
+.Kotlin
+[source,kotlin,indent=0,subs="verbatim",role="secondary"]
+----
+include::{docs-kotlin}/io/restclient/resttemplate/customization/MyRestTemplateCustomizer.kt[]
 ----
 
 Finally, you can also create your own `RestTemplateBuilder` bean.
 To prevent switching off the auto-configuration of a `RestTemplateBuilder` and prevent any `RestTemplateCustomizer` beans from being used, make sure to configure your custom instance with a `RestTemplateBuilderConfigurer`.
 The following example exposes a `RestTemplateBuilder` with what Spring Boot would auto-configure, except that custom connect and read timeouts are also specified:
 
-[source,java,indent=0,subs="verbatim"]
+.Java
+[source,java,indent=0,subs="verbatim",role="primary"]
 ----
 include::{docs-java}/io/restclient/resttemplate/customization/MyRestTemplateBuilderConfiguration.java[]
+----
+.Kotlin
+[source,kotlin,indent=0,subs="verbatim",role="secondary"]
+----
+include::{docs-kotlin}/io/restclient/resttemplate/customization/MyRestTemplateBuilderConfiguration.kt[]
 ----
 
 The most extreme (and rarely used) option is to create your own `RestTemplateBuilder` bean without using a configurer.
@@ -63,9 +81,15 @@ Spring Boot is configuring that builder to share HTTP resources, reflect codecs 
 
 The following code shows a typical example:
 
-[source,java,indent=0,subs="verbatim"]
+.Java
+[source,java,indent=0,subs="verbatim",role="primary"]
 ----
 include::{docs-java}/io/restclient/webclient/MyService.java[]
+----
+.Kotlin
+[source,kotlin,indent=0,subs="verbatim",role="secondary"]
+----
+include::{docs-kotlin}/io/restclient/webclient/MyService.kt[]
 ----
 
 
