@@ -22,7 +22,7 @@ import org.springframework.data.mongodb.MongoDatabaseFactory
 import org.springframework.stereotype.Component
 
 @Component
-class MyBean(private val mongo: MongoDatabaseFactory) {
+class MyBean(val mongo: MongoDatabaseFactory) {
 	// @fold:on // ...
 	fun someMethod(): MongoCollection<Document> {
 		val db = mongo.mongoDatabase

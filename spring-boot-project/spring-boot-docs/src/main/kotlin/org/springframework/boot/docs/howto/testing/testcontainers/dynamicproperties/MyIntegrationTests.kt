@@ -26,7 +26,7 @@ import org.testcontainers.junit.jupiter.Testcontainers
 
 @SpringBootTest
 @Testcontainers
-internal class MyIntegrationTests {
+class MyIntegrationTests {
 	@Test
 	fun myTest() {
 		// ...

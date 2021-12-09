@@ -21,13 +21,15 @@ import org.springframework.amqp.core.AmqpTemplate
 import org.springframework.stereotype.Component
 
 @Component
-class MyBean(private val amqpAdmin: AmqpAdmin, private val amqpTemplate: AmqpTemplate) {
-	// @fold:on // ...
+class MyBean(val amqpAdmin: AmqpAdmin, val amqpTemplate: AmqpTemplate) {
 	fun someMethod() {
 		amqpAdmin.getQueueInfo("someQueue")
 	}
 
 	fun someOtherMethod() {
 		amqpTemplate.convertAndSend("hello")
-	} // @fold:off
+	}
+
+	// ...
+
 }

@@ -924,6 +924,11 @@ The following example shows such a `WebTestClientBuilderCustomizer` being define
 ----
 include::{docs-java}/features/testing/springbootapplications/autoconfiguredspringrestdocs/withwebtestclient/MyWebTestClientBuilderCustomizerConfiguration.java[]
 ----
+.Kotlin
+[source,kotlin,indent=0,subs="verbatim",role="secondary"]
+----
+include::{docs-kotlin}/features/testing/springbootapplications/autoconfiguredspringrestdocs/withwebtestclient/MyWebTestClientBuilderCustomizerConfiguration.kt[]
+----
 
 
 

@@ -22,7 +22,7 @@ import org.springframework.context.ApplicationEventPublisher
 import org.springframework.stereotype.Component
 
 @Component
-class MyLocalCacheVerifier(private val eventPublisher: ApplicationEventPublisher) {
+class MyLocalCacheVerifier(val eventPublisher: ApplicationEventPublisher) {
 	fun checkLocalCache() {
 		try {
 			// ...

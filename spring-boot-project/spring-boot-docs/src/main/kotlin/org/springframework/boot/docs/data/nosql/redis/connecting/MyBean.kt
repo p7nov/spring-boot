@@ -20,7 +20,7 @@ import org.springframework.data.redis.core.StringRedisTemplate
 import org.springframework.stereotype.Component
 
 @Component
-class MyBean(private val template: StringRedisTemplate) {
+class MyBean(val template: StringRedisTemplate) {
 	// @fold:on // ...
 	fun someMethod(): Boolean {
 		return template.hasKey("spring")

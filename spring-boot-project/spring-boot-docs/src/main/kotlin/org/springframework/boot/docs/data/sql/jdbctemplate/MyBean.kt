@@ -20,7 +20,7 @@ import org.springframework.jdbc.core.JdbcTemplate
 import org.springframework.stereotype.Component
 
 @Component
-class MyBean(private val jdbcTemplate: JdbcTemplate) {
+class MyBean(val jdbcTemplate: JdbcTemplate) {
 	fun doSomething() {
 		jdbcTemplate.execute("delete from customer")
 	}

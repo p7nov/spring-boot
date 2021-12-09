@@ -7,7 +7,7 @@ import reactor.core.publisher.Mono
 
 @RestController
 @RequestMapping("/users")
-class MyRestController(private val userRepository: UserRepository, private val customerRepository: CustomerRepository) {
+class MyRestController(val userRepository: UserRepository, val customerRepository: CustomerRepository) {
 	@GetMapping("/{user}")
 	fun getUser(@PathVariable userId: Long): Mono<User?> {
 		return userRepository.findById(userId)

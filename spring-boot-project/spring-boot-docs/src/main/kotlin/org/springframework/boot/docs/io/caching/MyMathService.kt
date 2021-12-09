@@ -23,7 +23,6 @@ import org.springframework.stereotype.Component
 class MyMathService {
 	@Cacheable("piDecimals")
 	fun computePiDecimal(precision: Int): Int {
-		/**/
 		return 0
 	}
 }

@@ -21,11 +21,10 @@ import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
 
 @SpringBootApplication
-object MyApplication {
-	@JvmStatic
-	fun main(args: Array<String>) {
-		val application = SpringApplication(MyApplication::class.java)
-		application.setBannerMode(Banner.Mode.OFF)
-		application.run(*args)
-	}
+class MyApplication
+
+fun main(args: Array<String>) {
+	val application = SpringApplication(MyApplication::class.java)
+	application.setBannerMode(Banner.Mode.OFF)
+	application.run(*args)
 }

@@ -22,7 +22,7 @@ import org.neo4j.driver.Values
 import org.springframework.stereotype.Component
 
 @Component
-class MyBean(private val driver: Driver) {
+class MyBean(val driver: Driver) {
 	// @fold:on // ...
 	fun someMethod(message: String?): String {
 		driver.session().use { session ->

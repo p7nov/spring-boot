@@ -20,7 +20,7 @@ import org.springframework.ldap.core.LdapTemplate
 import org.springframework.stereotype.Component
 
 @Component
-class MyBean(private val template: LdapTemplate) {
+class MyBean(val template: LdapTemplate) {
 	// @fold:on // ...
 	fun someMethod(): List<User> {
 		return template.findAll(User::class.java)

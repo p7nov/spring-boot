@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.*
 
 @RestController
 @RequestMapping("/users")
-class MyRestController(private val userRepository: UserRepository, private val customerRepository: CustomerRepository) {
+class MyRestController(val userRepository: UserRepository, val customerRepository: CustomerRepository) {
 	@GetMapping("/{user}")
 	fun getUser(@PathVariable userId: Long): User {
 		return userRepository.findById(userId).get()

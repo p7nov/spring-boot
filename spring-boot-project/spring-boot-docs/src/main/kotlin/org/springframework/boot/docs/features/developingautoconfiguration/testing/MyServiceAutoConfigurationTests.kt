@@ -25,8 +25,7 @@ import org.springframework.boot.test.context.runner.ApplicationContextRunner
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 
-
-internal open class MyServiceAutoConfigurationTests {
+class MyServiceAutoConfigurationTests {
 	// tag::runner[]
 	val contextRunner = ApplicationContextRunner()
 		.withConfiguration(AutoConfigurations.of(MyServiceAutoConfiguration::class.java))
@@ -82,10 +81,11 @@ internal open class MyServiceAutoConfigurationTests {
 	}
 
 	@Configuration(proxyBeanMethods = false)
-	internal class UserConfiguration {
+	class UserConfiguration {
 		@Bean
 		fun myCustomService(): MyService {
 			return MyService("mine")
 		}
-	} // end::test-user-config[]
+	}
+	// end::test-user-config[]
 }

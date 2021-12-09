@@ -19,6 +19,5 @@ package org.springframework.boot.docs.features.externalconfig.typesafeconfigurat
 import org.springframework.boot.context.properties.ConfigurationProperties
 
 @ConfigurationProperties(prefix = "my.main-project.person")
-class MyPersonProperties {
-	var firstName: String? = null
+class MyPersonProperties(val firstName: String) {
 }

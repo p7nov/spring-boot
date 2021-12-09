@@ -21,7 +21,7 @@ import org.springframework.stereotype.Component
 import reactor.core.publisher.Flux
 
 @Component
-class MyBean(private val databaseClient: DatabaseClient) {
+class MyBean(val databaseClient: DatabaseClient) {
 	// @fold:on // ...
 	fun someMethod(): Flux<Map<String, Any>> {
 		return databaseClient.sql("select * from user").fetch().all()

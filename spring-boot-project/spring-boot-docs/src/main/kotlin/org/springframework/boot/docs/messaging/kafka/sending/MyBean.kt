@@ -20,9 +20,11 @@ import org.springframework.kafka.core.KafkaTemplate
 import org.springframework.stereotype.Component
 
 @Component
-class MyBean(private val kafkaTemplate: KafkaTemplate<String, String>) {
-	// @fold:on // ...
+class MyBean(val kafkaTemplate: KafkaTemplate<String, String>) {
 	fun someMethod() {
 		kafkaTemplate.send("someTopic", "Hello")
-	} // @fold:off
+	}
+
+	// ...
+
 }

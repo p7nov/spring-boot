@@ -22,7 +22,7 @@ import org.springframework.stereotype.Component
 
 
 @Component
-class MyBean(private val solr: SolrClient) {
+class MyBean(val solr: SolrClient) {
 	// @fold:on // ...
 	fun someMethod(): SolrPingResponse {
 		return solr.ping("users")

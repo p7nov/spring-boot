@@ -20,11 +20,9 @@ import org.quartz.JobExecutionContext
 import org.springframework.scheduling.quartz.QuartzJobBean
 
 class MySampleJob : QuartzJobBean() {
-	// @fold:on // fields ...
 	private var myService: MyService? = null
 	private var name: String? = null
 
-	// @fold:off
 	// Inject "MyService" bean
 	fun setMyService(myService: MyService?) {
 		this.myService = myService

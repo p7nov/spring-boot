@@ -22,7 +22,7 @@ import org.springframework.data.mongodb.core.MongoTemplate
 import org.springframework.stereotype.Component
 
 @Component
-class MyBean(private val mongoTemplate: MongoTemplate) {
+class MyBean(val mongoTemplate: MongoTemplate) {
 	// @fold:on // ...
 	fun someMethod(): MongoCollection<Document> {
 		return mongoTemplate.getCollection("users")

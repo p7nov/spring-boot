@@ -21,7 +21,7 @@ import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 
 @Configuration(proxyBeanMethods = false)
-internal class MyHibernateConfiguration {
+class MyHibernateConfiguration {
 	@Bean
 	fun caseSensitivePhysicalNamingStrategy(): PhysicalNamingStrategyStandardImpl {
 		return PhysicalNamingStrategyStandardImpl()

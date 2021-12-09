@@ -20,7 +20,7 @@ import org.springframework.jms.core.JmsTemplate
 import org.springframework.stereotype.Component
 
 @Component
-class MyBean(private val jmsTemplate: JmsTemplate) {
+class MyBean(val jmsTemplate: JmsTemplate) {
 	// @fold:on // ...
 	fun someMethod() {
 		jmsTemplate.convertAndSend("hello")

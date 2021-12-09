@@ -20,7 +20,7 @@ import org.springframework.data.cassandra.core.CassandraTemplate
 import org.springframework.stereotype.Component
 
 @Component
-class MyBean(private val template: CassandraTemplate) {
+class MyBean(val template: CassandraTemplate) {
 	// @fold:on // ...
 	fun someMethod(): Long {
 		return template.count(User::class.java)
